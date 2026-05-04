@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.header-text h1 {
+    color: #4a148c;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    color: #7b1fa2;
+    font-size: 1.1rem;
+}
+
+.btn-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    min-height: 60px;
+}
+
+.btn {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* ... keep previous styles ... */
+
+#yesBtn {
+    background-color: #9c27b0; 
+    color: white;
+    padding: 20px 50px; /* Increased padding for more size */
+    font-size: 1.5rem;   /* Larger font */
+    box-shadow: 0 4px 20px rgba(156, 39, 176, 0.5);
+    animation: pulse 1.5s infinite; /* Continuous pulse effect */
+    z-index: 100; /* Ensures it stays above the "No" button */
+}
+
+#yesBtn:hover {
+    background-color: #7b1fa2;
+    transform: scale(1.2); /* Even bigger on hover */
+    animation: none; /* Stop pulsing when hovering */
+}
+
+/* Pulse animation to make it irresistible */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#noBtn {
+    background-color: #6c2d06;
+    color: whitesmoke;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    /* Remove 'left' and 'absolute' for the start */
+    position: relative; 
+    transition: all 0.2s ease; /* Makes the first jump smoother */
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.success-message h1 {
+    color: #880e4f;
+    font-size: 3rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
