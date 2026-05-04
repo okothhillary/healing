@@ -29,7 +29,10 @@ noBtn.addEventListener('touchstart', (e) => {
 });
 
 yesBtn.addEventListener('click', () => {
+    music.src = 'viviano.mp3'; 
+    music.loop = true;
     music.play();
+
     mainCard.style.display = 'none';
     successMsg.style.display = 'block';
     console.log("Mission Accomplished! ❤️");
