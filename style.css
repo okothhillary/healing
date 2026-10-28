@@ -62,8 +62,8 @@ body {
     padding: 20px 50px; /* Increased padding for more size */
     font-size: 1.5rem;   /* Larger font */
     box-shadow: 0 4px 20px rgba(156, 39, 176, 0.5);
-    animation: pulse 1.5s infinite; /* Continuous pulse effect */
-    z-index: 100; /* Ensures it stays above the "No" button */
+    animation: pulse 1.5s infinite; 
+    z-index: 100; 
 }
 
 #yesBtn:hover {
