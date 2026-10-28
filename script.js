@@ -35,5 +35,5 @@ yesBtn.addEventListener('click', () => {
 
     mainCard.style.display = 'none';
     successMsg.style.display = 'block';
-    console.log("Mission Accomplished! ❤️");
+    console.log("Mission Accomplished!❤️");
 });
